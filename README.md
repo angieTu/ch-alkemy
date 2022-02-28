@@ -1,3 +1,41 @@
+# Challenge Alkemy.
+
+Credenciales: challenge@alkemy.org , react.
+
+Sobre el proyecto:
+
+Librerías:
+* Axios
+* Node-Sass
+* React JS
+* React Router
+* Formik
+
+Funcionalidades:
+Header:
+Sin iniciar sesión no se muestra.
+Se añade un estilo al navbar según la página en la que se encuentre el usuario.
+Se muestra el boton para cerrar la sesión.
+
+Home:
+Muestra el promedio de los platos seleccionados.
+Accede al detalle.
+Administra los platos seleccionados.
+
+Buscador:
+Arroja resultados buscando un ingrediente.
+Permite agregar platos al menú.
+
+
+
+Routing (React Router Dom):
+/login : Iniciar sesión.
+/ : Panel del usuario, con los platos seleccionados y el promedio.
+/buscador : Página de búsqueda de platos.
+/recipe/{recipeID} : Vista detallada de un plato.
+
+--------------------------------------------------------------------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
