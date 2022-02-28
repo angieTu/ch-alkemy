@@ -1,0 +1,21 @@
+.nav-container {
+  height: 70px;
+  /* position: fixed; */
+  display: flex;
+  align-items: center;
+  background-color: #c7efcf;
+
+  .links-container {
+    justify-content: space-evenly;
+    display: flex;
+
+    a {
+      font-size: 25px;
+      color: black;
+      &.active {
+        color: #17c964;
+        border-bottom: 2px solid;
+      }
+    }
+  }
+}

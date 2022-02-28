@@ -1,0 +1,44 @@
+body {
+  font-family: "Dancing Script", cursive;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+.home-container {
+  overflow: hidden;
+  min-height: calc(100vh - 100px);
+
+  h1 {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .empty-container {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    min-height: calc(100vh - 100px);
+  }
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+
+    .details-menu {
+      padding-left: 20px;
+      ul {
+        line-height: 3;
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          margin-right: 35px;
+        }
+      }
+    }
+  }
+}

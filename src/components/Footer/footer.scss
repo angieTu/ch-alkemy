@@ -1,0 +1,32 @@
+.footer {
+  background-color: #c7efcf;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  padding: 0 0 29px 12px;
+
+  .footer-list {
+    list-style: none;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    a {
+      text-decoration: none;
+      color: #000000;
+      cursor: pointer;
+    }
+    .footer-list-item {
+      margin: 8px 11px;
+
+      & > a {
+        font-size: 14px;
+
+        &:hover {
+          //   color: $secondary-color;
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+}

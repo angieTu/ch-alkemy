@@ -1,24 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+
+import Detail from "./pages/Detail/Detail";
+import Home from "./pages/Home/Home";
+import Login from "./pages/Login/Login";
+import Buscador from "./pages/Buscador/Buscador";
+import Nav from "./components/Nav/Nav";
+
+import { AuthContext } from "../src/contexts/AuthContext";
+import Footer from "./components/Footer/Footer";
 
 function App() {
+  const { isLogged } = useContext(AuthContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        {isLogged && <Nav />}
+        <Routes>
+          <Route exact path="/home" element={<Navigate to="/" />}></Route>
+          <Route
+            exact
+            path="/"
+            element={isLogged ? <Home /> : <Navigate to="/login" />}
+          />
+          <Route
+            exact
+            path="/recipe/:recipeID"
+            element={isLogged ? <Detail /> : <Navigate to="/login" />}
+          />
+          <Route
+            exact
+            path="/buscador"
+            element={isLogged ? <Buscador /> : <Navigate to="/login" />}
+          />
+          <Route
+            exact
+            path="/login"
+            element={isLogged ? <Navigate to="/" /> : <Login />}
+          />
+        </Routes>
+        <Footer />
+      </Router>
+    </>
   );
 }
 

@@ -1,0 +1,32 @@
+.buscador-container {
+  min-height: calc(100vh - 130px);
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+
+  .form-container {
+    form {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 45%;
+      margin: 0 auto;
+
+      input {
+        border-radius: 10px;
+        border: 2px solid #17c964;
+        padding: 5px;
+        outline: none;
+      }
+    }
+  }
+
+  .spinner {
+    margin: 0 auto;
+  }
+  .row {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
